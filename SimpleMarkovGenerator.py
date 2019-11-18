@@ -1,7 +1,10 @@
 import numpy as np
 import os
-# Trump's speeches here: https://github.com/ryanmcdermott/trump-speeches
-storyContent = open('/ShakespeareTextDump.txt', encoding='utf8').read()
+#PUT CUSTOM FILENAME HERE AND MAKE SURE ITS IN THE SAME FOLDER AS THIS SCRIPT
+fileName = "ShakespeareTextDump.txt"
+__location__ = os.path.realpath(
+    os.path.join(os.getcwd(), os.path.dirname(__file__)))
+storyContent = open(os.path.join(__location__, fileName), encoding='utf8').read()
 
 corpus = storyContent.split()
 

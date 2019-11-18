@@ -2,7 +2,13 @@
 import numpy as np
 import random
 import os
-text =  open('C:/code/markov/sampletextdump.txt', encoding='utf8').read()
+#PUT CUSTOM FILENAME HERE AND MAKE SURE ITS IN THE SAME FOLDER AS THIS SCRIPT
+fileName = "ShakespeareTextDump.txt"
+
+__location__ = os.path.realpath(
+    os.path.join(os.getcwd(), os.path.dirname(__file__)))
+text = open(os.path.join(__location__, fileName), encoding='utf8').read()
+
 corpus = text.split()
 def make_pairs(corpus):
     for i in range(len(corpus) - 2):
