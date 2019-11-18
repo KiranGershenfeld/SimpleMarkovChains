@@ -1,7 +1,7 @@
 import numpy as np
 import os
 # Trump's speeches here: https://github.com/ryanmcdermott/trump-speeches
-storyContent = open('C:/code/markov/sampletextdump.txt', encoding='utf8').read()
+storyContent = open('/ShakespeareTextDump.txt', encoding='utf8').read()
 
 corpus = storyContent.split()
 
